@@ -609,7 +609,7 @@ function TweaksPanel({ children }) {
     try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e){}
     return () => window.removeEventListener('message', onMsg);
   }, []);
-  if (!open) return <button className="twk-toggle" onClick={() => setOpen(true)}>Tweaks</button>;
+  if (!open) return null;
   return (
     <div className="twk">
       <div className="twk-hd"><b>Tweaks</b>
